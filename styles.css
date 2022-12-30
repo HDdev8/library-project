@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #37352f;
+}
+
+body {
+  background: white;
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  position: relative;
+}
+
+/* Toggle Button */
+.button-cover {
+  padding-bottom: 0.5rem;
+  position: relative;
+  width: 6.25rem;
+  height: 2.25rem;
+  box-sizing: border-box;
+  grid-row: 2;
+}
+
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button {
+  position: relative;
+  top: 50%;
+  width: 4.625rem;
+  height: 2.25rem;
+  margin: -1.25rem auto 0;
+  overflow: hidden;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: #fce9e9;
+  transition: 0.3s ease all;
+  z-index: 1;
+  border: 0.0625rem solid #d8d8d8;
+}
+
+.button-1 .knobs::before {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1.25rem;
+  height: 0.625rem;
+  color: #fff;
+  font-size: 0.625rem;
+  background-color: #f44034;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 0.5625rem 0.25rem;
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+.button-1 .knobs,
+.button-1 .knobs::before,
+.button-1 .layer {
+  transition: 0.3s ease all;
+}
+
+.button.r,
+.button.r .layer {
+  border-radius: 6.25rem;
+}
+
+.button-1 .checkbox:checked ~ .layer {
+  background-color: #e8fdf6;
+}
+
+.button-1 .checkbox:checked + .knobs:before {
+  content: "";
+  left: 2.625rem;
+  background-color: #3aeeb2;
+}
+
+/* Everything else */
+
+nav {
+  display: grid;
+  background-color: #f4f1eb;
+  z-index: 0;
+  height: 5rem;
+  align-items: center;
+  justify-items: center;
+  border: 0.075rem solid #d8d8d8;
+}
+
+/* h1 {
+  text-align: center;
+  padding-top: 1rem;
+} */
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+ul#list-container {
+  display: grid;
+  justify-content: space-evenly;
+  justify-items: center;
+  grid-template-rows: repeat(auto-fit, minmax(min(13.5rem, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(20.75rem, 100%), 1fr));
+  min-height: 60vh;
+  padding: 3rem;
+  gap: 2rem;
+}
+
+/* card */
+.card {
+  border: 0.0625rem solid #d8d8d8;
+  border-radius: 0.25rem;
+  background-color: #f9f7f4;
+  width: 20.75rem;
+  height: 13.5rem;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  align-items: end;
+  z-index: 0;
+  color: #2f3437;
+  line-break: anywhere;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row: 1;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 0;
+}
+
+/* card-text */
+.book-title {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  z-index: 0;
+}
+
+.author {
+  font-size: 0.9rem;
+  padding-bottom: 0.5rem;
+}
+
+.pages {
+  font-size: 0.85rem;
+}
+
+/* card-body */
+.card-body {
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: end;
+  justify-items: center;
+  z-index: 0;
+}
+
+.read-status {
+  grid-row: 1;
+  padding-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+button.remove {
+  width: 4.625rem;
+  height: 2.25rem;
+  border-radius: 1rem;
+  background-color: #f0f0f0;
+  border: 0.075rem solid #d8d8d8;
+  grid-row: 2;
+  grid-column: 2;
+  margin-bottom: 0.5rem;
+}
+
+/* form container */
+#form-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 3fr 1fr 3fr;
+  justify-items: center;
+  align-items: center;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+
+label {
+  padding-bottom: 0.25rem;
+}
+
+span {
+  padding-top: 0.25rem;
+}
+
+input:not(.radio-input) {
+  line-height: 1;
+  padding: 0.25rem;
+  border-radius: 0.3rem;
+  border-width: 0.075rem;
+  border-color: #bfbfbf;
+  width: 15rem;
+  font-size: 0.9rem;
+}
+
+/* Non-toggle Buttons: Basic style */
+button#add-book,
+button#add-to-library {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: #f0f0f0;
+  border: 0.075rem solid #d8d8d8;
+}
+
+button#add-book,
+button#add-book:hover,
+button#add-book:focus-within {
+  grid-column: 2;
+  align-self: end;
+  /*  */
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+button#add-book:active,
+button#add-to-library:active,
+button.remove:active {
+  background-color: #f2f2f2;
+  box-shadow: 0 0.0425rem #cccccc;
+  transform: translateY(0.0425rem);
+}
+
+button#add-book:hover,
+button#add-to-library:hover,
+button.remove:hover {
+  border-radius: 1rem;
+  border: 0.075rem solid #d9d9d9;
+  background-color: #d9d9d9;
+}
+
+.form-list-item {
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  align-content: space-around;
+  display: grid;
+  justify-content: center;
+}
+
+form#my-form {
+  grid-column: 2;
+  position: relative;
+  display: grid;
+}
+
+ul#form-list {
+  background-color: white;
+  border-radius: 0.25rem;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  visibility: hidden;
+  position: fixed;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  bottom: 3rem;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+form#my-form,
+ul#form-list,
+.form-list-item:not(#list-item-four) {
+  clear: auto;
+  z-index: 9;
+  width: 18rem;
+}
+
+.hidden-overlay {
+  background-color: #00000079;
+  z-index: 5;
+  position: fixed;
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*  */
+  -webkit-backdrop-filter: blur(0.425rem);
+  backdrop-filter: blur(0.425rem);
+}
+
+fieldset {
+  border: transparent;
+}
+
+#list-item-four {
+  justify-self: start;
+  padding-left: 1.5rem;
+}
+
+input[type="radio"] {
+  width: auto;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.radio-item {
+  padding-top: 0.25rem;
+}
+
+label[for="yes"],
+label[for="no"] {
+  padding-left: 0.25rem;
+}
+
+footer {
+  background-color: #f4f1eb;
+  height: 2.5rem;
+  border: 0.075rem solid #d8d8d8;
+  position: absolute;
+  padding-top: 3rem;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+  font-size: 80%;
+  color: white;
+  background-color: black;
+  border-radius: 0.25rem;
+}
+
+.error.active {
+  padding: 0.3em;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>My Library</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <nav><h1 id="page-heading">My Library</h1></nav>
+    <ul id="list-container"></ul>
+    <div id="form-container">
+      <button id="add-book" type="button">Add Book</button>
+      <form action="#" method="" id="my-form">
+        <ul id="form-list">
+          <li class="form-list-item" id="list-item-one">
+            <label for="title-field"
+              >Title<span aria-label="required">*</span></label
+            >
+            <input
+              type="text"
+              id="title-field"
+              name="title-field"
+              class="input"
+              required
+              minlength="1" />
+            <span class="error" aria-live="polite"></span>
+          </li>
+          <li class="form-list-item" id="list-item-two">
+            <label for="author-field"
+              >Author<span aria-label="required">*</span></label
+            >
+            <input
+              type="text"
+              id="author-field"
+              name="author-field"
+              class="input"
+              required
+              minlength="1" />
+            <span class="error" aria-live="polite"></span>
+          </li>
+          <li class="form-list-item" id="list-item-three">
+            <label for="pages-field">Pages</label>
+            <input
+              type="tel"
+              id="pages-field"
+              name="pages-field"
+              class="input" />
+          </li>
+          <li class="form-list-item" id="list-item-four">
+            <fieldset>
+              <legend>
+                Have you read this book?<span aria-label="required">*</span>
+              </legend>
+              <li class="radio-item">
+                <input
+                  type="radio"
+                  name="read-field"
+                  value="yes"
+                  id="yes"
+                  required />
+                <label for="yes">Yes</label>
+              </li>
+              <li class="radio-item">
+                <input type="radio" name="read-field" value="no" id="no" />
+                <label for="no">No</label>
+              </li>
+              <span class="error" aria-live="polite"></span>
+            </fieldset>
+          </li>
+          <button type="submit" id="add-to-library">Add to Library</button>
+        </ul>
+      </form>
+    </div>
+    <footer></footer>
+    <div id="overlay-div"></div>
+  </body>
+</html>
