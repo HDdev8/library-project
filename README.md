@@ -12,7 +12,7 @@ Library entries (Books) are created by submitting form values. Books are created
 
 ## Optimizations:
 
-I would like to refactor the code, using Factory Functions, to be better organized.
+I would like to refactor the code to be better organized, and I would like to try Factory Functions as an alternative to Constructor Functions.
 
 ## Lessons Learned:
 
