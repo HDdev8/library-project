@@ -8,7 +8,7 @@ This is my version of The Odin Project's library project (https://www.theodinpro
 
 **Tech used:** HTML, CSS, JavaScript
 
-Library entries (Books) are created by submitting form values. Books are created using a constructor function. Each entry is added to a library array. I use CSS Grid for the layout. Each entry's card can be toggled "Have Read" or "Have Not Read," which also changes the entry's value within the library array.
+Library entries (Books) are created by submitting form values. Books are created using a constructor function. Each entry is added to the library array. I use CSS Grid for the layout. Each entry's card can be toggled "Have Read" or "Have Not Read," which also changes the entry's value within the library array.
 
 ## Lessons Learned:
 
