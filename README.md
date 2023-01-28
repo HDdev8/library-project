@@ -10,6 +10,10 @@ This is my version of The Odin Project's library project (https://www.theodinpro
 
 Library entries (Books) are created by submitting form values. Books are created using a constructor function. Each entry is added to the library array. I use CSS Grid for the layout. Each entry's card can be toggled "Have Read" or "Have Not Read," which also changes the entry's value within the library array.
 
+## Optimizations:
+
+I would like to refactor the code, using Factory Functions, to be better organized.
+
 ## Lessons Learned:
 
-I was proud to make a toggle button that changes the value of its corresponding Book instance. I would like to refactor the code to be better organized. A later lesson says to refactor with Factory Functions, which I would like to do at some point.
+I was proud to make a toggle button that changes the value of its corresponding Book instance. I learned how to use "this" and constructor functions. I learned about preventDefault() when submitting a form. I was happy to create an overlay as well as a form that pops up after clicking the button to bring it up.
