@@ -12,4 +12,4 @@ Library entries (Books) are created by submitting form values. Books are created
 
 ## Lessons Learned:
 
-I was proud of making a toggle button that changes the value of its corresponding Book instance. I would like to refactor the code to be better organized. A later lesson says to refactor with Factory Functions, which I would like to do at some point.
+I was proud to make a toggle button that changes the value of its corresponding Book instance. I would like to refactor the code to be better organized. A later lesson says to refactor with Factory Functions, which I would like to do at some point.
